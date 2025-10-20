@@ -46,6 +46,13 @@ export default function Home() {
       link: "",
       github: "https://github.com/iM5LB/Healthcare_Dashboard"
     },
+    {
+      title: "Hospital Appointment System",
+      description: "A simple web-based system to manage hospital appointments with an easy-to-use interface.",
+      tags: ["PHP", "MySQL"],
+      link: "",
+      github: "https://github.com/iM5LB/Simple-General-Appointments"
+    },
   ];
 
   return (
