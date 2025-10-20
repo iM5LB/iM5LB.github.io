@@ -104,7 +104,7 @@ export default function Home() {
           <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             Welcome to 
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-              Welcome to Abdullah Suleiman Al-Ghawi portfolio
+            Abdullah Suleiman Al-Ghawi portfolio
             </span>
             portfolio
           </h1>
