@@ -37,21 +37,28 @@ export default function Home() {
       description: "A custom website for a FiveM roleplay server, featuring user registration, server status, and community forums.",
       tags: ["Laravel", "PHP", "MySQL"],
       link: "https://auralandrp.tailaa03c3.ts.net",
-      github: "#"
+      github: "https://auralandrp.tailaa03c3.ts.net"
     },
     {
       title: "Healthcare Dashboard",
       description: "A web-based system for managing healthcare staff assignments, room and ward allocations, and shift scheduling.",
       tags: ["PHP", "MySQL", "JavaScript"],
-      link: "",
+      link: "https://github.com/iM5LB/Healthcare_Dashboard",
       github: "https://github.com/iM5LB/Healthcare_Dashboard"
     },
     {
       title: "Hospital Appointment System",
       description: "A simple web-based system to manage hospital appointments with an easy-to-use interface.",
       tags: ["PHP", "MySQL"],
-      link: "",
+      link: "https://github.com/iM5LB/Simple-General-Appointments",
       github: "https://github.com/iM5LB/Simple-General-Appointments"
+    },
+    {
+      title: "Full Custom Discord Rich Presence",
+      description: "A powerful Discord plugin that gives you complete control over your Rich Presence status with advanced customization options and multiple profile support.",
+      tags: ["JavaScript"],
+      link: "https://github.com/iM5LB/FullCustomDiscordRichPresence",
+      github: "https://github.com/iM5LB/FullCustomDiscordRichPresence"
     },
   ];
 
@@ -94,10 +101,9 @@ export default function Home() {
             <span>Available for opportunities</span>
           </div>
           
-          <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            Welcome to my portfolio, I'm{" "}
+          <h1>
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-              Abdullah Suleiman Al-Ghawi
+              Welcome to Abdullah Suleiman Al-Ghawi portfolio
             </span>
           </h1>
           
