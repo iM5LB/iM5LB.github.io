@@ -39,6 +39,13 @@ export default function Home() {
       link: "https://auralandrp.tailaa03c3.ts.net",
       github: "#"
     },
+    {
+      title: "Healthcare Dashboard",
+      description: "A web-based system for managing healthcare staff assignments, room and ward allocations, and shift scheduling.",
+      tags: ["PHP", "MySQL", "JavaScript"],
+      link: "https://healthcare-dashboard.example.com",
+      github: "https://github.com/iM5LB/Healthcare_Dashboard"
+    },
   ];
 
   return (
