@@ -33,47 +33,12 @@ export default function Home() {
   };
   const projects = [
     {
-      title: "Project One",
-      description: "A full-stack web application built with modern technologies. Features include user authentication, real-time updates, and responsive design.",
-      tags: ["React", "Node.js", "MongoDB"],
-      link: "#",
+      title: "FiveM Server Website",
+      description: "A custom website for a FiveM roleplay server, featuring user registration, server status, and community forums.",
+      tags: ["Laravel", "PHP", "MySQL"],
+      link: "https://auralandrp.tailaa03c3.ts.net",
       github: "#"
     },
-    {
-      title: "Project Two",
-      description: "An innovative mobile-first application focused on user experience. Implements advanced animations and seamless navigation.",
-      tags: ["TypeScript", "Next.js", "Tailwind"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Project Three",
-      description: "Open-source tool that helps developers streamline their workflow. Built with performance and scalability in mind.",
-      tags: ["Python", "FastAPI", "Docker"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Project Four",
-      description: "Data visualization dashboard with interactive charts and real-time analytics. Clean interface with powerful insights.",
-      tags: ["Vue.js", "D3.js", "PostgreSQL"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Project Five",
-      description: "E-commerce platform with integrated payment processing and inventory management. Secure and scalable architecture.",
-      tags: ["React", "Express", "Stripe"],
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Project Six",
-      description: "Machine learning model for predictive analysis. Includes comprehensive documentation and API for easy integration.",
-      tags: ["Python", "TensorFlow", "Flask"],
-      link: "#",
-      github: "#"
-    }
   ];
 
   return (
@@ -116,9 +81,9 @@ export default function Home() {
           </div>
           
           <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            Hi, I'm{" "}
+            Welcome to my portfolio, I'm{" "}
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-              Your Name
+              Abdullah Suleiman Al-Ghawi
             </span>
           </h1>
           
@@ -196,19 +161,19 @@ export default function Home() {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a href="mailto:arya.b.es4.1.0@gmail.com">
+              <a href="mailto:14554378@uofn.edu.om">
                 <Button size="lg" variant="default">
                   <Mail className="mr-2 h-4 w-4" />
                   Email Me
                 </Button>
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/iM5LB" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline">
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Button>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/abdullah-sulaiman-hamood-alghawi-a99966365/" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline">
                   <Linkedin className="mr-2 h-4 w-4" />
                   LinkedIn
@@ -221,7 +186,7 @@ export default function Home() {
 
       <footer className="border-t border-border/40 bg-muted/20 py-8">
         <div className="container mx-auto max-w-6xl px-4 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Abdullah Suleiman Al-Ghawi. All rights reserved.</p>
         </div>
       </footer>
     </div>
