@@ -43,7 +43,7 @@ export default function Home() {
       title: "Healthcare Dashboard",
       description: "A web-based system for managing healthcare staff assignments, room and ward allocations, and shift scheduling.",
       tags: ["PHP", "MySQL", "JavaScript"],
-      link: "https://healthcare-dashboard.example.com",
+      link: "",
       github: "https://github.com/iM5LB/Healthcare_Dashboard"
     },
   ];
