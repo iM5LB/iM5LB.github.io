@@ -102,10 +102,12 @@ export default function Home() {
           </div>
           
           <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            Welcome to\n
+            Welcome to
+            <br />
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-            Abdullah Suleiman Al-Ghawi\n
+              Abdullah Suleiman Al-Ghawi
             </span>
+            <br />
             portfolio
           </h1>
           
