@@ -60,7 +60,7 @@ export default function Home() {
       link: "https://github.com/iM5LB/FullCustomDiscordRichPresence",
       github: "https://github.com/iM5LB/FullCustomDiscordRichPresence"
     },
-{
+    {
       title: "Simple Payments Tracker",
       description: "A simple payments tracking system built with JavaScript.",
       tags: ["TypeScript", "JavaScript", "PHP", "SQLite"],
