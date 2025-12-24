@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, ExternalLink, Code2, Folder, Moon, Sun } from "lucide-react";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Code2, Folder, Moon, Sun, Mail, ExternalLink, Github, Linkedin } from "lucide-react";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -10,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
       setIsDark(true);
       document.documentElement.classList.add('dark');
@@ -35,9 +34,9 @@ export default function Home() {
     {
       title: "FiveM Server Website",
       description: "A custom website for a FiveM roleplay server, featuring user registration, server status, and community forums.",
-      tags: ["Laravel", "PHP", "MySQL"],
+      tags: ["PHP", "MySQL", "JavaScript", "Lua"],
       link: "https://auralandrp.tailaa03c3.ts.net",
-      github: "https://auralandrp.tailaa03c3.ts.net"
+      github: "https://github.com/iM5LB" // Placeholder as specific repo wasn't found
     },
     {
       title: "Healthcare Dashboard",
@@ -59,19 +58,12 @@ export default function Home() {
       tags: ["JavaScript"],
       link: "https://github.com/iM5LB/FullCustomDiscordRichPresence",
       github: "https://github.com/iM5LB/FullCustomDiscordRichPresence"
-    },
-    {
-      title: "Simple Payments Tracker",
-      description: "A simple payments tracking system built with JavaScript.",
-      tags: ["TypeScript", "JavaScript", "PHP", "SQLite"],
-      link: "https://github.com/iM5LB/simple-payments-tracker",
-      github: "https://github.com/iM5LB/simple-payments-tracker"
-    },
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
-      <nav className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
+    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20 selection:bg-primary/20">
+      <nav className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md animate-in slide-in-from-top-full duration-500">
         <div className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
           <div className="flex items-center gap-2 font-serif text-xl font-semibold">
             <Code2 className="h-6 w-6 text-primary" />
@@ -88,7 +80,7 @@ export default function Home() {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="h-9 w-9"
+              className="h-9 w-9 text-muted-foreground hover:text-foreground"
               aria-label="Toggle theme"
             >
               {isDark ? (
@@ -102,12 +94,12 @@ export default function Home() {
       </nav>
 
       <main className="container mx-auto max-w-6xl px-4 py-16 md:py-24">
-        <section className="mb-24 text-center">
+        <section className="mb-24 text-center animate-in fade-in zoom-in-95 duration-700 slide-in-from-bottom-8">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary">
             <Folder className="h-4 w-4" />
             <span>Available for opportunities</span>
           </div>
-          
+
           <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             <br />
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
@@ -115,15 +107,15 @@ export default function Home() {
             </span>
             <br />
           </h1>
-          
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            A passionate developer creating innovative solutions and building amazing projects. 
+
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground md:text-xl leading-relaxed">
+            A passionate developer creating innovative solutions and building amazing projects.
             I love turning ideas into reality through clean code and thoughtful design.
           </p>
-          
+
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href="#projects">
-              <Button size="lg" className="group">
+              <Button size="lg" className="group shadow-lg shadow-primary/20 hover:shadow-primary/30">
                 <span>View Projects</span>
                 <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Button>
@@ -137,8 +129,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="mb-24">
-          <div className="mb-12 text-center">
+        <section id="projects" className="mb-24 scroll-mt-24">
+          <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 fill-mode-backwards">
             <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Featured Projects
             </h2>
@@ -146,43 +138,23 @@ export default function Home() {
               A collection of my recent work and contributions
             </p>
           </div>
-          
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-backwards">
             {projects.map((project, index) => (
-              <Card key={index} className="group transition-all hover:shadow-lg hover:shadow-primary/5">
-                <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-sm">{project.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="mb-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-3">
-                    <a href={project.link} className="flex-1">
-                      <Button variant="default" size="sm" className="w-full">
-                        <ExternalLink className="mr-2 h-3.5 w-3.5" />
-                        View
-                      </Button>
-                    </a>
-                    <a href={project.github}>
-                      <Button variant="outline" size="sm">
-                        <Github className="h-4 w-4" />
-                      </Button>
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                link={project.link}
+                github={project.github}
+              />
             ))}
           </div>
         </section>
 
-        <section id="contact" className="text-center">
-          <div className="mx-auto max-w-2xl rounded-2xl border border-border/50 bg-muted/20 p-8 md:p-12">
+        <section id="contact" className="text-center scroll-mt-24 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-backwards">
+          <div className="mx-auto max-w-2xl rounded-2xl border border-border/50 bg-muted/20 p-8 md:p-12 shadow-sm">
             <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight sm:text-4xl">
               Let's Work Together
             </h2>
@@ -191,7 +163,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="mailto:14554378@uofn.edu.om">
-                <Button size="lg" variant="default">
+                <Button size="lg" variant="default" className="shadow-md">
                   <Mail className="mr-2 h-4 w-4" />
                   Email Me
                 </Button>
